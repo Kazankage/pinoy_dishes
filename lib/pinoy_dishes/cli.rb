@@ -1,7 +1,7 @@
-class PhilppineDishes
+class PinoyDishes::CLI
 
-def call
+  def call
   puts "Hello World!"
-end
+  end
 
 end

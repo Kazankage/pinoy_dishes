@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require './lib/philippine_dishes.rb'
+require './lib/pinoy_dishes.rb'
 
-PhilippineDishes:CLI.new.call
+PinoyDishes::CLI.new.call
