@@ -17,11 +17,11 @@ class PinoyDishes::CLI
       5) Kare-Kare
       6) Pinakbet
       7) Diniguan
-      8) Pancit
+      8) Bicol Express
       9) Lumpia
       10) -silog
     DOC
-  #@meals = PinoyDishes::Meals.to_cook
+  @meals = PinoyDishes::Meals.to_cook
   end
   
    def pano_gawin
@@ -45,7 +45,7 @@ class PinoyDishes::CLI
     when "Diniguan"
       puts "Here is the recipe for Diniguan: https://panlasangpinoy.com/dinuguan-blood-stew/"
     when "Pancit"
-      puts "Here is the recipe for Pancit: https://panlasangpinoy.com/pancit-guisado-recipe-knr-sc/"
+      puts "Here is the recipe for Pancit: https://panlasangpinoy.com/pancit-canton-recipe/"
     when "Lumpia"
       puts "Here is the recipe for Lumpia: https://panlasangpinoy.com/chicken-lumpia/"
     when "-silog"
