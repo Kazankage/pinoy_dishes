@@ -1,6 +1,3 @@
-require "pinoy_dishes/version"
+require_relative "./pinoy_dishes/version"
+require_relative "./pinoy_dishes/cli"
 
-module PinoyDishes
-  class Error < StandardError; end
-  # Your code goes here...
-end
