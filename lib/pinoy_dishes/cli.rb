@@ -22,7 +22,7 @@ class PinoyDishes::CLI
       9) Lumpia
       10) -silog
     DOC
-  #@meals = PinoyDishes::Meals.to_cook
+  @meals = PinoyDishes::Meals.to_cook
   end
   
    def pano_gawin

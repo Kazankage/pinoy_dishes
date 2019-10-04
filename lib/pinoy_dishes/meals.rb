@@ -6,10 +6,13 @@ class PinoyDishes::Meals
     self.scrape_meals
   end
   
-  def scrape_meals
+  
+  def self.scrape_meals
     meals = []
     
-    deals << self.scrape_list_of_philippine_dishes
+  meals << self.scrape_dishes
+   
+=begin
   puts <<-DOC.gsub /^\s*/, ''
           1) Adobo
           2) Sinigang
@@ -22,7 +25,7 @@ class PinoyDishes::Meals
           9) Lumpia
           10) -silog
         DOC
-=begin
+
         meal_1 = self.new
         meal_1.name = "Adobo" #For example, adobo! This one people switch the meat/ protein they use all the time. This recipe calls for chicken, but you could easily change it for beef or pork. It can also be made with SQUID! Thats called Pusit Adobo. Another one of my absolute favourites. Definitely should try it out. 
         meal_1.difficulty = "easy"
@@ -83,7 +86,7 @@ class PinoyDishes::Meals
       meals
   end
   
-  def self.scrape_list_of_philippine_dishes
+  def self.scrape_dishes
     doc = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/List_of_Philippine_dishes"))
     binding.pry
   end
