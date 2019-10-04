@@ -14,7 +14,7 @@ class PinoyDishes::CLI
      case choice
       when "Y"
         puts "Which category would you like to choose from?"
-        @meals = PinoyDishes::Meals.to_cook
+        @meals = PinoyDishes::Meals.scrape_dishes
         
         when "N"
           paalam
