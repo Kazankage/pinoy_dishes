@@ -17,6 +17,7 @@ class PinoyDishes::Meals
   end
   
   def self.scrape_dishes
+    
     doc = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/List_of_Philippine_dishes"))
     title = doc.search("h1.firstHeading").text
     #puts "Pick a category of food you wish to learn more about: "
@@ -41,6 +42,6 @@ class PinoyDishes::Meals
     category
 
 
-   # binding.pry
+    binding.pry
   end
 end
