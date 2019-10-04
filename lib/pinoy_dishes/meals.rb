@@ -1,9 +1,13 @@
 class PinoyDishes::Meals
-
   attr_accessor :name, :difficulty, :url
+  
   def self.to_cook
     # Should return buch of instances of recipies
-
+    self.scrape_meals
+  end
+  
+  def scrape_meals
+    meals = []
   puts <<-DOC.gsub /^\s*/, ''
           1) Adobo
           2) Sinigang
@@ -73,6 +77,7 @@ class PinoyDishes::Meals
         meal_10.url = "https://panlasangpinoy.com/tapsilog-recipe/"
         
         #Ok, that was a lot of work. Let's see if my code actually works tho.
-=end       
+=end    
+      meals
   end
 end
