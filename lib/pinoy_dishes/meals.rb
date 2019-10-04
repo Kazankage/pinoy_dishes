@@ -8,6 +8,8 @@ class PinoyDishes::Meals
   
   def scrape_meals
     meals = []
+    
+    deals << self.scrape_list_of_philippine_dishes
   puts <<-DOC.gsub /^\s*/, ''
           1) Adobo
           2) Sinigang
@@ -79,5 +81,10 @@ class PinoyDishes::Meals
         #Ok, that was a lot of work. Let's see if my code actually works tho.
 =end    
       meals
+  end
+  
+  def self.scrape_list_of_philippine_dishes
+    doc = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/List_of_Philippine_dishes"))
+    binding.pry
   end
 end
