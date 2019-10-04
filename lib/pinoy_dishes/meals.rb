@@ -1,4 +1,5 @@
 class PinoyDishes::Meals
+  
   attr_accessor :name, :difficulty, :url
   def self.to_cook
     # Should return buch of instances of recipies
@@ -47,7 +48,7 @@ class PinoyDishes::Meals
         meal_6 = self.new
         meal_6.name = "Pinakbet" #Theres a funny video of a guy cooking this. Hold on, let me get the link: https://www.youtube.com/watch?v=0XM0j5FwTyE This guy is great. 
         meal_6.difficulty = "moderate"
-        meal_6.url = "https://panlasangpinoy.com/pinakbet-tagalog-recipe-knr-sc/"
+        #meal_6.url = "https://panlasangpinoy.com/pinakbet-tagalog-recipe-knr-sc/"
         
         meal_7 = self.new
         meal_7.name = "Dinuguan"
