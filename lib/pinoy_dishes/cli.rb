@@ -8,8 +8,8 @@ class PinoyDishes::CLI
   end
   
   def gutom_na_tayo
-    
-    puts "Do you have a hankering for Filipino Food? Try making one of these dishes:"
+    @meals = PinoyDishes::Meals.to_cook
+=begin    puts "Do you have a hankering for Filipino Food? Try making one of these dishes:"
     puts <<-DOC.gsub /^\s*/, ''
       1) Adobo
       2) Sinigang
@@ -22,11 +22,11 @@ class PinoyDishes::CLI
       9) Lumpia
       10) -silog
     DOC
-  @meals = PinoyDishes::Meals.to_cook
+=end  
   end
   
    def pano_gawin
-    puts "Enter the number of the dish you wish to learn how to cook:"
+    puts "Enter the name of the dish you wish to learn how to cook:"
     answer = nil
     answer = gets.strip
      case answer
