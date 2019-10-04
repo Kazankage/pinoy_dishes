@@ -2,27 +2,24 @@ class PinoyDishes::CLI
 
  def call 
     gutom_na_tayo
-    pano_gawin
-    iba
+    #pano_gawin
+    #iba
     paalam
   end
   
   def gutom_na_tayo
-    @meals = PinoyDishes::Meals.to_cook
-=begin    puts "Do you have a hankering for Filipino Food? Try making one of these dishes:"
-    puts <<-DOC.gsub /^\s*/, ''
-      1) Adobo
-      2) Sinigang
-      3) Linaga
-      4) Bistek
-      5) Kare-Kare
-      6) Pinakbet
-      7) Diniguan
-      8) Bicol Express
-      9) Lumpia
-      10) -silog
-    DOC
-=end  
+    puts "Do you have a hankering for Filipino Food? (Y/N)"
+    choice = nil
+    choice = gets.strip
+     case choice
+      when "Y"
+        puts "Which category would you like to choose from?"
+        @meals = PinoyDishes::Meals.to_cook
+        
+        when "N"
+          paalam
+          exit
+        end
   end
   
    def pano_gawin
@@ -54,14 +51,17 @@ class PinoyDishes::CLI
   end
   
   def iba 
-    puts "Would you like to learn more? Type 'return' to return to the menu. If not, type 'Salamat'."
+    puts "Would you like to learn more? Type 'Return' to return to the menu. If not, type 'Salamat'."
     input = nil
    input = gets.strip
     case input
-      when "return"
+      when "Return"
          gutom_na_tayo
          pano_gawin
          iba
+      when "Salamat"
+        paalam
+        exit
   end
 end
   
