@@ -2,7 +2,7 @@ class PinoyDishes::CLI
 
  def call 
     gutom_na_tayo
-    #pano_gawin
+    pano_gawin
     #iba
     paalam
   end
@@ -14,7 +14,7 @@ class PinoyDishes::CLI
      case choice
       when "Y"
         puts "Which category would you like to choose from?"
-        @meals = PinoyDishes::Meals.to_cook
+        # @meals = PinoyDishes::Meals.to_cook
 =begin       @meals.each.with_index(1) do |meals, i|
           puts "#{i}) #{meal.category}"
        end
@@ -29,7 +29,9 @@ class PinoyDishes::CLI
   end
   
    def pano_gawin
-    puts "Enter the name of the dish you wish to learn how to cook:"
+      @meals = PinoyDishes::Meals.to_cook
+      puts @meals
+=begin    puts "Enter the name of the dish you wish to learn how to cook:"
     answer = nil
     answer = gets.strip
      case answer
@@ -54,8 +56,9 @@ class PinoyDishes::CLI
     when "-silog"
       puts "Here is the recipe for -silog: https://panlasangpinoy.com/tapsilog-recipe/"
     end
+=end
   end
-  
+
   def iba 
     puts "Would you like to learn more? Type 'Return' to return to the menu. If not, type 'Salamat'."
     input = nil
@@ -75,4 +78,4 @@ end
     puts "Ok. Sige. Salamat po!"
     puts "Enjoy your meal!"
   end
-end
+end 
