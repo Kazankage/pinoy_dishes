@@ -12,9 +12,9 @@ class PinoyDishes::CLI
     choice = nil
     choice = gets.strip
      case choice
-      when "Y", "y"
+      when "Y", "y", "Yes", "yes"
         puts "Which dish would you like to learn how to prepare?"
-        when "N", "n"
+        when "N", "n", "No", "no"
           paalam
           exit
         else
@@ -29,32 +29,32 @@ class PinoyDishes::CLI
         puts "#{i + 1}) #{meals.name}"
       end
           
-=begin    puts "Enter the name of the dish you wish to learn how to cook:"
+puts "Enter the name of the dish you wish to learn how to cook:"
     answer = nil
     answer = gets.strip
      case answer
-    when "Adobo"
+    when "Adobo", "adobo", "Easy Chicken Adobo Recipe", 'easy chicken adobo recipe'
       puts "Here is the recipe for Adobo: https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/"
-    when "Sinigang"
+    when "Sinigang", 'sinigang'
       puts "Here is the recipe for Sinigang: https://panlasangpinoy.com/pork-sinigang-na-baboy-recipe/"
-    when "Linaga"
-      puts "Here is the recipe for Linaga: https://panlasangpinoy.com/nilagang-litid-ng-baka/"
-    when "Bistek"
+    when "Nilnaga", "nilnaga", "Nilagang Litid ng Baka", "nilagang litid ng baka"
+      puts "Here is the recipe for Nilaga: https://panlasangpinoy.com/nilagang-litid-ng-baka/"
+    when "Bistek", "bistek", "Bistek Tagalog Recipe - Pinoy Beefsteak", "bistek tagalog recipe - pinoy beefsteak"
       puts "Here is the recipe for Bistek: https://panlasangpinoy.com/bistek-tagalog-beefsteak-recipe/"
-    when "Kare-Kare"
+    when "Kare-Kare", "kare-kare", "Oxtail Kare-Kare Recipe", "oxtail kare-kare recipe"
       puts "Here is the recipe for Kare-Kare: https://panlasangpinoy.com/oxtail-kare-kare-recipe-peanut-stew/"
-    when "Pinakbet"
+    when "Pinakbet", "pinakbet", "Pinakbet Tagalog", "pinakbet tagalog"
       puts "Here is the recipe for Pinakbet: https://panlasangpinoy.com/pinakbet-tagalog-recipe-knr-sc/"
-    when "Diniguan"
+    when "Diniguan", "diniguan", "Dinuguan Recipe", "diniguan recipe"
       puts "Here is the recipe for Diniguan: https://panlasangpinoy.com/dinuguan-blood-stew/"
-    when "Pancit"
-      puts "Here is the recipe for Pancit: https://panlasangpinoy.com/pancit-canton-recipe/"
-    when "Lumpia"
+    when "Bicol Express", "bicol express", "Pork Bicol Express Recipe", "pork bicol express recipe"
+      puts "Here is the recipe for Bicol Express: https://panlasangpinoy.com/pork-bicol-express-recipe/"
+    when "Lumpia", "lumpia", "Chicken Lumpia", "chicken lumpia"
       puts "Here is the recipe for Lumpia: https://panlasangpinoy.com/chicken-lumpia/"
-    when "-silog"
+    when "Tapsilog", "tapsilog", "Tapsilog Recipe", "tapsilog recipe"
       puts "Here is the recipe for -silog: https://panlasangpinoy.com/tapsilog-recipe/"
     end
-=end
+
   end
 
   def iba 
@@ -62,11 +62,11 @@ class PinoyDishes::CLI
     input = nil
    input = gets.strip
     case input
-      when "Return"
+      when "Return", "return"
          gutom_na_tayo
          pano_gawin
          iba
-      when "Salamat"
+      when "Salamat", 'salamat'
         paalam
         exit
   end
