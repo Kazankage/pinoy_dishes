@@ -15,7 +15,10 @@ class PinoyDishes::CLI
       when "Y"
         puts "Which category would you like to choose from?"
         @meals = PinoyDishes::Meals.to_cook
-        
+=begin       @meals.each.with_index(1) do |meals, i|
+          puts "#{i}) #{meal.category}"
+       end
+=end
         when "N"
           paalam
           exit
