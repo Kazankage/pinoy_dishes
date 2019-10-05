@@ -1,6 +1,5 @@
 class PinoyDishes::Meals
-  attr_accessor :name, :difficulty, :url
-  
+  attr_accessor :name, :category, :dish, :description, :url #THEANSWER IS RIGHT HERE!!!!
   
   def self.to_cook
    puts "Howdy1"
@@ -26,19 +25,19 @@ class PinoyDishes::Meals
     
     meal = self.new
     meal.name = doc.search("h1.firstHeading").text
-    meal.name = doc.search("span#Main_dishes.mw-headline").text
-    meal.name = doc.search("span#Soups_and_stews.mw-headline").text
-    meal.name = doc.search("span#Noodle_dishes.mw-headline").text
-    meal.name = doc.search("span#Vegetables.mw-headline").text
-    meal.name = doc.search("span#Rice.mw-headline").text
-    meal.name = doc.search("span#Preserved_meat_and_fish.mw-headline").text
-    meal.name = doc.search("span#Pickles_and_side_dishes.mw-headline").text
-    meal.name = doc.search("span#Miscellaneous_and_street_food.mw-headline").text
-    meal.name = doc.search("span#Bread_and_pastries.mw-headline").text
-    meal.name = doc.search("span#Sweets.mw-headline").text
-    meal.name = doc.search("span#Sauces_and_condiments.mw-headline").text
-    meal.name = doc.search("span#Drinks.mw-headline").text
-    meal.name = doc.search("span#Ingredients.mw-headline").text
+    meal.category = doc.search("span#Main_dishes.mw-headline").text
+    meal.category = doc.search("span#Soups_and_stews.mw-headline").text
+    meal.category = doc.search("span#Noodle_dishes.mw-headline").text
+    meal.category = doc.search("span#Vegetables.mw-headline").text
+    meal.category = doc.search("span#Rice.mw-headline").text
+    meal.category = doc.search("span#Preserved_meat_and_fish.mw-headline").text
+    meal.category = doc.search("span#Pickles_and_side_dishes.mw-headline").text
+    meal.category = doc.search("span#Miscellaneous_and_street_food.mw-headline").text
+    meal.category = doc.search("span#Bread_and_pastries.mw-headline").text
+    meal.category = doc.search("span#Sweets.mw-headline").text
+    meal.category = doc.search("span#Sauces_and_condiments.mw-headline").text
+    meal.category = doc.search("span#Drinks.mw-headline").text
+    meal.category = doc.search("span#Ingredients.mw-headline").text
 
     meal
 
