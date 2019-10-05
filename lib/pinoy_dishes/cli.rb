@@ -14,11 +14,6 @@ class PinoyDishes::CLI
      case choice
       when "Y"
         puts "Which category would you like to choose from?"
-        # @meals = PinoyDishes::Meals.to_cook
-=begin       @meals.each.with_index(1) do |meals, i|
-          puts "#{i}) #{meal.category}"
-       end
-=end
         when "N"
           paalam
           exit
@@ -30,7 +25,11 @@ class PinoyDishes::CLI
   
    def pano_gawin
       @meals = PinoyDishes::Meals.to_cook
-      puts @meals
+      @meals.each_with_index do |meals, i|
+        #binding pry
+        puts "#{i + 1}) #{meals.category}"
+      end
+          
 =begin    puts "Enter the name of the dish you wish to learn how to cook:"
     answer = nil
     answer = gets.strip
@@ -78,4 +77,4 @@ end
     puts "Ok. Sige. Salamat po!"
     puts "Enjoy your meal!"
   end
-end 
+end

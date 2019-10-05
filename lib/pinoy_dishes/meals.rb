@@ -2,31 +2,37 @@ class PinoyDishes::Meals
   attr_accessor :name, :category, :dish, :description, :url #THEANSWER IS RIGHT HERE!!!!
   
   def self.to_cook
-   puts "Howdy1"
+
    # Should return buch of instances of recipies
   self.scrape_meals
   end
   
   
   def self.scrape_meals
-    puts "Howdy2"
+  
     meals = []
     
   meals << self.scrape_dishes
    
-   
-      meals
+   meals
   end
   
+  
   def self.scrape_dishes
-    puts "Howdy3"
     
     doc = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/List_of_Philippine_dishes"))
     
     meal = self.new
-    meal.name = doc.search("h1.firstHeading").text
+    #meal.name = doc.search("h1.firstHeading").text
     meal.category = doc.search("span#Main_dishes.mw-headline").text
-    meal.category = doc.search("span#Soups_and_stews.mw-headline").text
+    meal
+  end
+  
+  
+  
+  
+  
+=begin    meal.category = doc.search("span#Soups_and_stews.mw-headline").text
     meal.category = doc.search("span#Noodle_dishes.mw-headline").text
     meal.category = doc.search("span#Vegetables.mw-headline").text
     meal.category = doc.search("span#Rice.mw-headline").text
@@ -39,10 +45,10 @@ class PinoyDishes::Meals
     meal.category = doc.search("span#Drinks.mw-headline").text
     meal.category = doc.search("span#Ingredients.mw-headline").text
 
-    meal
 
+    meal 
 
    #binding.pry
   end
-
+=end
 end
