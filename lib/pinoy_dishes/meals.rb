@@ -1,5 +1,5 @@
 class PinoyDishes::Meals
-  attr_accessor :name, :category, :dish, :instructions, :url #THEANSWER IS RIGHT HERE!!!!
+  attr_accessor :name, :category, :dish, :instructions, :ingredients, :url #THEANSWER IS RIGHT HERE!!!!
   
   def self.to_cook
 
@@ -32,7 +32,8 @@ class PinoyDishes::Meals
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/easy-chicken-adobo-recipe/#wprm-recipe-container-71472"))
     
     meal = self.new
-    meal.name = doc.search("h1.entry-title").textpinak
+    meal.name = doc.search("h1.entry-title").text
+    meal.instructions = [doc.search("#wprm-recipe-71472-step-0-0").text, doc.search("#wprm-recipe-71472-step-0-1").text, doc.search("#wprm-recipe-71472-step-0-2").text, doc.search("#wprm-recipe-71472-step-0-3").text, doc.search("#wprm-recipe-71472-step-0-4").text, doc.search("#wprm-recipe-71472-step-0-5").text]
     meal
     
   end

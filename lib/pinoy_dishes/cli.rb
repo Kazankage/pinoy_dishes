@@ -8,7 +8,7 @@ class PinoyDishes::CLI
   end
   
   def gutom_na_tayo
-    puts "Do you have a hankering for Filipino Food? (Y/N)"
+puts "Do you have a hankering for Filipino Food? (Y/N)"
     choice = nil
     choice = gets.strip
      case choice
@@ -19,7 +19,7 @@ class PinoyDishes::CLI
           exit
         else
           gutom_na_tayo
-        end
+    end
   end
   
    def pano_gawin
@@ -34,7 +34,13 @@ puts "Enter the name of the dish you wish to learn how to cook:"
     answer = gets.strip
      case answer
     when "Adobo", "adobo", "Easy Chicken Adobo Recipe", 'easy chicken adobo recipe'
-      puts "Here is the recipe for Adobo: https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/"
+      puts "Here are the directions for Adobo: "
+      @meals = PinoyDishes::Meals.to_cook
+      @meals.each_with_index do |meals, i|
+      
+        puts "#{meals.instructions}"
+      end
+=begin     puts "Here is the recipe for Adobo: https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/"
     when "Sinigang", 'sinigang'
       puts "Here is the recipe for Sinigang: https://panlasangpinoy.com/pork-sinigang-na-baboy-recipe/"
     when "Nilnaga", "nilnaga", "Nilagang Litid ng Baka", "nilagang litid ng baka"
@@ -54,7 +60,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
     when "Tapsilog", "tapsilog", "Tapsilog Recipe", "tapsilog recipe"
       puts "Here is the recipe for -silog: https://panlasangpinoy.com/tapsilog-recipe/"
     end
-
+=end
   end
 
   def iba 
@@ -76,4 +82,5 @@ end
     puts "Ok. Sige. Salamat po!"
     puts "Enjoy your meal!"
   end
+end
 end
