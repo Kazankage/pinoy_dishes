@@ -3,7 +3,7 @@ class PinoyDishes::CLI
  def call 
     gutom_na_tayo
     pano_gawin
-    #iba
+    iba
     paalam
   end
   
@@ -12,12 +12,11 @@ class PinoyDishes::CLI
     choice = nil
     choice = gets.strip
      case choice
-      when "Y"
-        puts "Which category would you like to choose from?"
-        when "N"
+      when "Y", "y"
+        puts "Which dish would you like to learn how to prepare?"
+        when "N", "n"
           paalam
           exit
-          
         else
           gutom_na_tayo
         end
@@ -27,7 +26,7 @@ class PinoyDishes::CLI
       @meals = PinoyDishes::Meals.to_cook
       @meals.each_with_index do |meals, i|
         #binding pry
-        puts "#{i + 1}) #{meals.category}"
+        puts "#{i + 1}) #{meals.name}"
       end
           
 =begin    puts "Enter the name of the dish you wish to learn how to cook:"
