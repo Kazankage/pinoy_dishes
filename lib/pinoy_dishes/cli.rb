@@ -23,23 +23,23 @@ puts "Do you have a hankering for Filipino Food? (Y/N)"
   end
   
    def pano_gawin
-      @meals = PinoyDishes::Meals.to_cook
-      @meals.each_with_index do |meals, i|
+=begin     @meals = PinoyDishes::Meals.to_cook
+       @meals.each_with_index do |meals, i|
       
         puts "#{i + 1}) #{meals.name}."
       end
-          
+=end
 puts "Enter the name of the dish you wish to learn how to cook:"
     answer = nil
     answer = gets.strip
      case answer
     when "Adobo", "adobo", "Easy Chicken Adobo Recipe", 'easy chicken adobo recipe'
       puts "Here are the directions for Adobo: "
-      @meals = PinoyDishes::Meals.to_cook #Hmm.. Okie.. Lets not touch that then.. Haha. 
-      @meals.each do |meals|
+      puts @meals_adobo = PinoyDishes::Meals.scrape_adobo.instructions
+      #@meals_adobo.each do |meals|
       
-        puts "#{meals.instructions}"
-      end
+       # puts "#{meals.instructions}"
+      #end
       # puts "Here is the recipe for Adobo: https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/"
     
     when "Sinigang", 'sinigang'

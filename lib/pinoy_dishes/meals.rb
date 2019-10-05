@@ -1,9 +1,8 @@
 class PinoyDishes::Meals
   attr_accessor :name, :category, :dish, :instructions, :ingredients, :url 
   
-  def self.to_cook
+=begin  def self.to_cook #Lets try this.. Hmm. 
 
-   # Should return buch of instances of recipies
   self.scrape_meals
   end
   
@@ -25,10 +24,10 @@ class PinoyDishes::Meals
  
    meals
   end
-  
+=end  
   
   def self.scrape_adobo
-    
+    meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/easy-chicken-adobo-recipe/#wprm-recipe-container-71472"))
     
     meal = self.new
