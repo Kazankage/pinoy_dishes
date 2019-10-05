@@ -63,7 +63,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
    input = gets.strip
     case input
       when "Return", "return"
-         gutom_na_tayo
+      
          pano_gawin
          iba
       when "Salamat", 'salamat'
