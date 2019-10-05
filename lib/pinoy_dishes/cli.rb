@@ -25,8 +25,8 @@ class PinoyDishes::CLI
    def pano_gawin
       @meals = PinoyDishes::Meals.to_cook
       @meals.each_with_index do |meals, i|
-        #binding pry
-        puts "#{i + 1}) #{meals.name}"
+      
+        puts "#{i + 1}) #{meals.name}."
       end
           
 puts "Enter the name of the dish you wish to learn how to cook:"
