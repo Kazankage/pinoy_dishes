@@ -35,7 +35,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
      case answer
     when "Adobo", "adobo", "Easy Chicken Adobo Recipe", 'easy chicken adobo recipe'
       puts "Here are the directions for Adobo: "
-      @meals = PinoyDishes::Meals.to_cook
+      @meals = PinoyDishes::Meals.to_cook #Hmm.. Okie.. Lets not touch that then.. Haha. 
       @meals.each do |meals|
       
         puts "#{meals.instructions}"
@@ -51,7 +51,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
       end
       # puts "Here is the recipe for Sinigang: https://panlasangpinoy.com/pork-sinigang-na-baboy-recipe/"
     
-    when "Nilnaga", "nilnaga", "Nilagang Litid ng Baka", "nilagang litid ng baka"
+    when "Nilaga", "nilaga", "Nilagang Litid ng Baka", "nilagang litid ng baka"
        puts "Here are the directions for Niglaga: "
       @meals = PinoyDishes::Meals.to_cook
       @meals.each do |meals|
@@ -67,6 +67,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
       
         puts "#{meals.instructions}"
       end
+      
       # puts "Here is the recipe for Bistek: https://panlasangpinoy.com/bistek-tagalog-beefsteak-recipe/"
     
     when "Kare-Kare", "kare-kare", "Oxtail Kare-Kare Recipe", "oxtail kare-kare recipe"

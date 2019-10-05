@@ -1,5 +1,5 @@
 class PinoyDishes::Meals
-  attr_accessor :name, :category, :dish, :instructions, :ingredients, :url #THEANSWER IS RIGHT HERE!!!!
+  attr_accessor :name, :category, :dish, :instructions, :ingredients, :url 
   
   def self.to_cook
 
@@ -44,6 +44,7 @@ class PinoyDishes::Meals
     
     meal = self.new
     meal.name = doc.search("h1.entry-title").text
+    meal.instructions = [doc.search("#wprm-recipe-45253-step-0-0").text, doc.search("#wprm-recipe-45253-step-0-1").text, doc.search("#wprm-recipe-45253-step-0-2").text, doc.search("#wprm-recipe-45253-step-0-3").text, doc.search("#wprm-recipe-45253-step-0-4").text, doc.search("#wprm-recipe-45253-step-0-5").text, doc.search("#wprm-recipe-45253-step-0-6").text, doc.search("#wprm-recipe-45253-step-0-7").text, doc.search("#wprm-recipe-45253-step-0-8").text, doc.search("#wprm-recipe-45253-step-0-9").text]
     meal
   end
 
@@ -53,6 +54,7 @@ def self.scrape_linaga
     
     meal = self.new
     meal.name = doc.search("h1.entry-title").text
+    meal.instructions = [doc.search("#wprm-recipe-48498-step-0-0").text, doc.search("#wprm-recipe-48498-step-0-1").text, doc.search("#wprm-recipe-48498-step-0-2").text, doc.search("#wprm-recipe-48498-step-0-3").text, doc.search("#wprm-recipe-45253-step-0-4").text, doc.search("#wprm-recipe-48498-step-0-5").text, doc.search("#wprm-recipe-48498-step-0-6").text]
     meal
   end
   
@@ -62,6 +64,7 @@ def self.scrape_linaga
     
     meal = self.new
     meal.name = doc.search("h1.entry-title").text
+    meal.instructions = [doc.search("#wprm-recipe-47275-step-0-0").text, doc.search("#wprm-recipe-47275-step-0-1").text, doc.search("#wprm-recipe-47275-step-0-2").text, doc.search("#wprm-recipe-47275-step-0-3").text, doc.search("#wprm-recipe-47275-step-0-4").text, doc.search("#wprm-recipe-47275-step-0-5").text, doc.search("#wprm-recipe-47275-step-0-6").text, doc.search("#wprm-recipe-47275-step-0-7").text]
     meal
   end
   
@@ -71,6 +74,8 @@ def self.scrape_linaga
     
     meal = self.new
     meal.name = doc.search("h1.entry-title").text
+    meal.instructions = [doc.search("#wprm-recipe-47800-step-0-0").text, 
+    doc.search("#wprm-recipe-47800-step-0-1").text, doc.search("#wprm-recipe-47800-step-0-2").text, doc.search("#wprm-recipe-47800-step-0-3").text, doc.search("#wprm-recipe-47800-step-0-4").text, doc.search("#wprm-recipe-47800-step-0-5").text, doc.search("#wprm-recipe-47800-step-0-6").text, doc.search("#wprm-recipe-47800-step-0-7").text, doc.search("#wprm-recipe-47800-step-0-8").text, doc.search("#wprm-recipe-47800-step-0-9").text, doc.search("#wprm-recipe-47800-step-1-0").text, doc.search("#wprm-recipe-47800-step-1-1").text, doc.search("#wprm-recipe-47800-step-1-2").text]
     meal
   end
   
@@ -80,6 +85,8 @@ def self.scrape_linaga
     
     meal = self.new
     meal.name = doc.search("h1.entry-title").text
+    meal.instructions = [doc.search("#wprm-recipe-51921-step-0-0").text, 
+    doc.search("#wprm-recipe-51921-step-0-1").text, doc.search("#wprm-recipe-51921-step-0-2").text, doc.search("#wprm-recipe-51921-step-0-3").text, doc.search("#wprm-recipe-51921-step-0-4").text, doc.search("#wprm-recipe-51921-step-0-5").text, doc.search("#wprm-recipe-51921-step-0-6").text, doc.search("#wprm-recipe-51921-step-0-7").text, doc.search("#wprm-recipe-47800-step-0-8").text]
     meal
   end
   
@@ -89,6 +96,8 @@ def self.scrape_linaga
     
     meal = self.new
     meal.name = doc.search("h1.entry-title").text
+    meal.instructions = [doc.search("#wprm-recipe-47397-step-0-0").text, 
+    doc.search("#wprm-recipe-47397-step-0-1").text, doc.search("#wprm-recipe-47397-step-0-2").text, doc.search("#wprm-recipe-47397-step-0-3").text, doc.search("#wprm-recipe-47397-step-0-4").text, doc.search("#wprm-recipe-47397-step-0-5").text, doc.search("#wprm-recipe-47397-step-0-6").text]
     meal
   end
   
@@ -98,6 +107,8 @@ def self.scrape_linaga
     
     meal = self.new
     meal.name = doc.search("h1.entry-title").text
+      meal.instructions = [doc.search("#wprm-recipe-48050-step-0-0").text, 
+    doc.search("#wprm-recipe-48050-step-0-1").text, doc.search("#wprm-recipe-48050-step-0-2").text, doc.search("#wprm-recipe-48050-step-0-3").text, doc.search("#wprm-recipe-48050-step-0-4").text, doc.search("#wprm-recipe-48050-step-0-5").text, doc.search("#wprm-recipe-48050-step-0-6").text, doc.search("#wprm-recipe-48050-step-0-7").text, doc.search("#wprm-recipe-48050-step-0-8").text]
     meal
   end
   
@@ -107,6 +118,8 @@ def self.scrape_linaga
     
     meal = self.new
     meal.name = doc.search("h1.entry-title").text
+    meal.instructions = [doc.search("#wprm-recipe-71005-step-0-0").text, 
+    doc.search("#wprm-recipe-71005-step-0-1").text, doc.search("#wprm-recipe-71005-step-0-2").text, doc.search("#wprm-recipe-71005-step-0-3").text, doc.search("#wprm-recipe-71005-step-0-4").text, doc.search("#wprm-recipe-71005-step-0-5").text]
     meal
   end
   
@@ -116,6 +129,8 @@ def self.scrape_linaga
     
     meal = self.new
     meal.name = doc.search("h1.entry-title").text
+     meal.instructions = [doc.search("#wprm-recipe-70557-step-0-0").text, 
+    doc.search("#wprm-recipe-70557-step-0-1").text, doc.search("#wprm-recipe-70557-step-0-2").text, doc.search("#wprm-recipe-70557-step-0-3").text, doc.search("#wprm-recipe-70557-step-0-4").text, doc.search("#wprm-recipe-70557-step-0-5").text]
     meal
   end
   
