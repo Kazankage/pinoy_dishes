@@ -1,7 +1,7 @@
 class PinoyDishes::Meals
   attr_accessor :name, :category, :dish, :instructions, :ingredients, :url 
   
-=begin  def self.to_cook #Lets try this.. Hmm. 
+def self.to_cook #Lets try this.. Hmm. 
 
   self.scrape_meals
   end
@@ -13,7 +13,7 @@ class PinoyDishes::Meals
     
   meals << self.scrape_adobo
   meals << self.scrape_sinigang
-  meals << self.scrape_linaga
+  meals << self.scrape_nilaga
   meals << self.scrape_bistek
   meals << self.scrape_kare_kare
   meals << self.scrape_pinakbet
@@ -24,21 +24,24 @@ class PinoyDishes::Meals
  
    meals
   end
-=end  
+
   
   def self.scrape_adobo
     meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/easy-chicken-adobo-recipe/#wprm-recipe-container-71472"))
     
     meal = self.new
+    
     meal.name = doc.search("h1.entry-title").text
+    
     meal.instructions = [doc.search("#wprm-recipe-71472-step-0-0").text, doc.search("#wprm-recipe-71472-step-0-1").text, doc.search("#wprm-recipe-71472-step-0-2").text, doc.search("#wprm-recipe-71472-step-0-3").text, doc.search("#wprm-recipe-71472-step-0-4").text, doc.search("#wprm-recipe-71472-step-0-5").text]
+    
     meal
     
   end
   
   def self.scrape_sinigang
-    
+     meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/pork-sinigang-na-baboy-recipe/"))
     
     meal = self.new
@@ -47,8 +50,8 @@ class PinoyDishes::Meals
     meal
   end
 
-def self.scrape_linaga
-    
+def self.scrape_nilaga
+    meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/nilagang-litid-ng-baka/"))
     
     meal = self.new
@@ -58,7 +61,7 @@ def self.scrape_linaga
   end
   
   def self.scrape_bistek
-    
+    meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/bistek-tagalog-beefsteak-recipe/"))
     
     meal = self.new
@@ -68,7 +71,7 @@ def self.scrape_linaga
   end
   
   def self.scrape_kare_kare
-    
+    meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/oxtail-kare-kare-recipe-peanut-stew/"))
     
     meal = self.new
@@ -79,7 +82,7 @@ def self.scrape_linaga
   end
   
   def self.scrape_pinakbet
-    
+    meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/pinakbet-tagalog-recipe-knr-sc/"))
     
     meal = self.new
@@ -90,7 +93,7 @@ def self.scrape_linaga
   end
   
   def self.scrape_dinuguan
-    
+    meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/dinuguan-blood-stew/"))
     
     meal = self.new
@@ -101,7 +104,7 @@ def self.scrape_linaga
   end
   
   def self.scrape_bicol_express
-    
+    meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/pork-bicol-express-recipe/"))
     
     meal = self.new
@@ -112,7 +115,7 @@ def self.scrape_linaga
   end
   
   def self.scrape_lumpia
-    
+    meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/chicken-lumpia/"))
     
     meal = self.new
@@ -123,7 +126,7 @@ def self.scrape_linaga
   end
   
   def self.scrape_tapsilog
-    
+    meal = []
     doc = Nokogiri::HTML(open("https://panlasangpinoy.com/tapsilog-recipe/"))
     
     meal = self.new

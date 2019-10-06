@@ -23,106 +23,107 @@ puts "Do you have a hankering for Filipino Food? (Y/N)"
   end
   
    def pano_gawin
-=begin     @meals = PinoyDishes::Meals.to_cook
+     @meals = PinoyDishes::Meals.to_cook
        @meals.each_with_index do |meals, i|
       
         puts "#{i + 1}) #{meals.name}."
       end
-=end
+      
 puts "Enter the name of the dish you wish to learn how to cook:"
     answer = nil
     answer = gets.strip
      case answer
     when "Adobo", "adobo", "Easy Chicken Adobo Recipe", 'easy chicken adobo recipe'
+
       puts "Here are the directions for Adobo: "
-      puts @meals_adobo = PinoyDishes::Meals.scrape_adobo.instructions
-      #@meals_adobo.each do |meals|
-      
-       # puts "#{meals.instructions}"
-      #end
-      # puts "Here is the recipe for Adobo: https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/"
-    
+      puts PinoyDishes::Meals.scrape_adobo.instructions
+      puts PinoyDishes::Meals.scrape_adobo.ingredients
+=begin  @meals_adobo.each do |meals|
+       puts "#{meals.instructions}"
+      end
+      puts "Here is the recipe for Adobo: https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/"
+=end     
     when "Sinigang", 'sinigang'
+ 
        puts "Here are the directions for Sinigang: "
-      @meals = PinoyDishes::Meals.to_cook
-      @meals.each do |meals|
-      
+       puts PinoyDishes::Meals.scrape_sinigang.instructions
+=begin      @meals.each do |meals|
         puts "#{meals.instructions}"
       end
-      # puts "Here is the recipe for Sinigang: https://panlasangpinoy.com/pork-sinigang-na-baboy-recipe/"
+=end      # puts "Here is the recipe for Sinigang: https://panlasangpinoy.com/pork-sinigang-na-baboy-recipe/"
     
     when "Nilaga", "nilaga", "Nilagang Litid ng Baka", "nilagang litid ng baka"
+     
        puts "Here are the directions for Niglaga: "
-      @meals = PinoyDishes::Meals.to_cook
-      @meals.each do |meals|
-      
+       puts PinoyDishes::Meals.scrape_nilaga.instructions
+=begin      @meals.each do |meals|
         puts "#{meals.instructions}"
       end
-      # puts "Here is the recipe for Nilaga: https://panlasangpinoy.com/nilagang-litid-ng-baka/"
+=end      # puts "Here is the recipe for Nilaga: https://panlasangpinoy.com/nilagang-litid-ng-baka/"
     
     when "Bistek", "bistek", "Bistek Tagalog Recipe - Pinoy Beefsteak", "bistek tagalog recipe - pinoy beefsteak"
+     
        puts "Here are the directions for Bistek: "
-      @meals = PinoyDishes::Meals.to_cook
-      @meals.each do |meals|
-      
+       puts PinoyDishes::Meals.scrape_bistek.instructions
+=begin      @meals.each do |meals|
         puts "#{meals.instructions}"
       end
       
       # puts "Here is the recipe for Bistek: https://panlasangpinoy.com/bistek-tagalog-beefsteak-recipe/"
-    
+=end    
     when "Kare-Kare", "kare-kare", "Oxtail Kare-Kare Recipe", "oxtail kare-kare recipe"
+       
        puts "Here are the directions for Kare-Kare: "
-      @meals = PinoyDishes::Meals.to_cook
-      @meals.each do |meals|
-      
+      @meals = PinoyDishes::Meals.scrape_kare_kare.instructions
+=begin      @meals.each do |meals|
         puts "#{meals.instructions}"
       end
-      # puts "Here is the recipe for Kare-Kare: https://panlasangpinoy.com/oxtail-kare-kare-recipe-peanut-stew/"
+=end      # puts "Here is the recipe for Kare-Kare: https://panlasangpinoy.com/oxtail-kare-kare-recipe-peanut-stew/"
     
     when "Pinakbet", "pinakbet", "Pinakbet Tagalog", "pinakbet tagalog"
+       
        puts "Here are the directions for Pinakbet: "
-      @meals = PinoyDishes::Meals.to_cook
-      @meals.each do |meals|
-      
+       puts PinoyDishes::Meals.scrape_pinakbet.instructions
+=begin      @meals.each do |meals|
         puts "#{meals.instructions}"
       end
-      # puts "Here is the recipe for Pinakbet: https://panlasangpinoy.com/pinakbet-tagalog-recipe-knr-sc/"
+=end      # puts "Here is the recipe for Pinakbet: https://panlasangpinoy.com/pinakbet-tagalog-recipe-knr-sc/"
     
     when "Diniguan", "diniguan", "Dinuguan Recipe", "diniguan recipe"
+
        puts "Here are the directions for Dinuguan: "
-      @meals = PinoyDishes::Meals.to_cook
-      @meals.each do |meals|
-      
+       puts PinoyDishes::Meals.scrape_diniguan.instructions
+=begin      @meals.each do |meals|
         puts "#{meals.instructions}"
       end
-      # puts "Here is the recipe for Diniguan: https://panlasangpinoy.com/dinuguan-blood-stew/"
+=end      # puts "Here is the recipe for Diniguan: https://panlasangpinoy.com/dinuguan-blood-stew/"
     
     when "Bicol Express", "bicol express", "Pork Bicol Express Recipe", "pork bicol express recipe"
+   
        puts "Here are the directions for Bicol Express: "
-      @meals = PinoyDishes::Meals.to_cook
-      @meals.each do |meals|
-      
+       puts PinoyDishes::Meals.scrape_bicol_express.instructions
+=begin      @meals.each do |meals|
         puts "#{meals.instructions}"
       end
-      # puts "Here is the recipe for Bicol Express: https://panlasangpinoy.com/pork-bicol-express-recipe/"
+=end      # puts "Here is the recipe for Bicol Express: https://panlasangpinoy.com/pork-bicol-express-recipe/"
     
     when "Lumpia", "lumpia", "Chicken Lumpia", "chicken lumpia"
+     
        puts "Here are the directions for Lumpia: "
-      @meals = PinoyDishes::Meals.to_cook
-      @meals.each do |meals|
-      
+       puts PinoyDishes::Meals.scrape_lumpia.instructions
+=begin      @meals.each do |meals|
         puts "#{meals.instructions}"
       end
-      # puts "Here is the recipe for Lumpia: https://panlasangpinoy.com/chicken-lumpia/"
+=end      # puts "Here is the recipe for Lumpia: https://panlasangpinoy.com/chicken-lumpia/"
     
     when "Tapsilog", "tapsilog", "Tapsilog Recipe", "tapsilog recipe"
+     
        puts "Here are the directions for Tapsilog: "
-      @meals = PinoyDishes::Meals.to_cook
-      @meals.each do |meals|
-      
+       puts PinoyDishes::Meals.scrape_tapsilog.instructions
+=begin      @meals.each do |meals|
         puts "#{meals.instructions}"
       end
-      # puts "Here is the recipe for -silog: https://panlasangpinoy.comhcipe/"
+=end      # puts "Here is the recipe for -silog: https://panlasangpinoy.comhcipe/"
     
   end
 
