@@ -1,4 +1,4 @@
-class PinoyDishes::CLI
+class PinoyDishes::Pagkain
 
  def call 
     gutom_na_tayo
@@ -13,7 +13,8 @@ class PinoyDishes::CLI
   end
   
   def gutom_na_tayo
-puts "Do you have a hankering for Filipino Food? (Y/N)"
+    puts "Hi there!"
+    puts "Do you have a hankering for Filipino Food? (Y/N)"
     choice = nil
     choice = gets.strip
      case choice
