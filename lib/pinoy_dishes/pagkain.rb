@@ -24,6 +24,7 @@ class PinoyDishes::Pagkain
           paalam
           exit
         else
+         
           gutom_na_tayo
     end
   end
@@ -133,6 +134,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
         paalam
         exit
     else
+      puts "Sorry, I didn't get that. Which food would you like to try to make?"
       pano_gawin
   end
 
