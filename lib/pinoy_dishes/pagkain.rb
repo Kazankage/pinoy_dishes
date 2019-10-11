@@ -13,7 +13,29 @@ class PinoyDishes::Pagkain
   end
   
   def gutom_na_tayo
-    puts "Hi there!"
+    
+    puts <<-DOC
+
+                     ---
+                  ---   ---
+                ---       ---
+                  ---   ---
+            ---      ---     _
+         ---   ---         -- --
+            ---           -- --
+                         -- --   
+                        -- --
+        -----------------------------
+        -----------------------------
+        ---                       ---
+         ---                     ---
+          ---                   ---
+           ---                ---
+            --------------------  
+      ________________________________
+      --------------------------------
+DOC
+    puts "Hi there! Welcome to COOKIN WITH KAZAN!"
     puts "Do you have a hankering for Filipino Food? (Y/N)"
     choice = nil
     choice = gets.strip
@@ -42,7 +64,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
      case answer
     when "Adobo", "adobo", "Easy Chicken Adobo Recipe", 'easy chicken adobo recipe', "1"
 
-      puts "Here are the directions for Adobo: "
+      puts "Here are the directions for cooking Adobo: "
       puts PinoyDishes::Meals.scrape_adobo.instructions
 =begin  @meals_adobo.each do |meals|
        puts "#{meals.instructions}"
@@ -51,7 +73,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
 =end     
     when "Sinigang", 'sinigang', "2"
  
-       puts "Here are the directions for Sinigang: "
+       puts "Here are the directions for cooking Sinigang: "
        puts PinoyDishes::Meals.scrape_sinigang.instructions
 =begin      @meals.each do |meals|
         puts "#{meals.instructions}"
@@ -60,7 +82,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
     
     when "Nilaga", "nilaga", "Nilagang Litid ng Baka", "nilagang litid ng baka", "3"
      
-       puts "Here are the directions for Niglaga: "
+       puts "Here are the directions for cooking Niglaga: "
        puts PinoyDishes::Meals.scrape_nilaga.instructions
 =begin      @meals.each do |meals|
         puts "#{meals.instructions}"
@@ -69,7 +91,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
     
     when "Bistek", "bistek", "Bistek Tagalog Recipe - Pinoy Beefsteak", "bistek tagalog recipe - pinoy beefsteak", "4"
      
-       puts "Here are the directions for Bistek: "
+       puts "Here are the directions for cooking Bistek: "
        puts PinoyDishes::Meals.scrape_bistek.instructions
 =begin      @meals.each do |meals|
         puts "#{meals.instructions}"
@@ -79,7 +101,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
 =end    
     when "Kare-Kare", "kare-kare", "Oxtail Kare-Kare Recipe", "oxtail kare-kare recipe", "5"
        
-       puts "Here are the directions for Kare-Kare: "
+       puts "Here are the directions for cooking Kare-Kare: "
        puts PinoyDishes::Meals.scrape_kare_kare.instructions
 =begin      @meals.each do |meals|
         puts "#{meals.instructions}"
@@ -88,7 +110,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
     
     when "Pinakbet", "pinakbet", "Pinakbet Tagalog", "pinakbet tagalog", "6"
        
-       puts "Here are the directions for Pinakbet: "
+       puts "Here are the directions for cooking Pinakbet: "
        puts PinoyDishes::Meals.scrape_pinakbet.instructions
 =begin      @meals.each do |meals|
         puts "#{meals.instructions}"
@@ -97,7 +119,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
     
     when "Diniguan", "diniguan", "Dinuguan Recipe", "diniguan recipe", "7"
 
-       puts "Here are the directions for Dinuguan: "
+       puts "Here are the directions for cooking Dinuguan: "
        puts PinoyDishes::Meals.scrape_diniguan.instructions
 =begin      @meals.each do |meals|
         puts "#{meals.instructions}"
@@ -106,7 +128,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
     
     when "Bicol Express", "bicol express", "Pork Bicol Express Recipe", "pork bicol express recipe", "8"
    
-       puts "Here are the directions for Bicol Express: "
+       puts "Here are the directions for cooking Bicol Express: "
        puts PinoyDishes::Meals.scrape_bicol_express.instructions
 =begin      @meals.each do |meals|
         puts "#{meals.instructions}"
@@ -115,7 +137,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
     
     when "Lumpia", "lumpia", "Chicken Lumpia", "chicken lumpia", "9"
      
-       puts "Here are the directions for Lumpia: "
+       puts "Here are the directions for cooking Lumpia: "
        puts PinoyDishes::Meals.scrape_lumpia.instructions
 =begin      @meals.each do |meals|
         puts "#{meals.instructions}"
@@ -124,7 +146,7 @@ puts "Enter the name of the dish you wish to learn how to cook:"
     
     when "Tapsilog", "tapsilog", "Tapsilog Recipe", "tapsilog recipe", "10"
      
-       puts "Here are the directions for Tapsilog: "
+       puts "Here are the directions for cooking Tapsilog: "
        puts PinoyDishes::Meals.scrape_tapsilog.instructions
 =begin      @meals.each do |meals|
         puts "#{meals.instructions}"
