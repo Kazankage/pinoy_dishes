@@ -53,112 +53,77 @@ DOC
   
    def pano_gawin
      @meals = PinoyDishes::Meals.to_cook
-       @meals.each_with_index do |meals, i|
+     @meals.each_with_index do |meals, i|
       
         puts "#{i + 1}) #{meals.name}."
       end
       
 puts "Enter the name of the dish you wish to learn how to cook:"
     answer = nil
-    answer = gets.strip
-     case answer
-    when "Adobo", "adobo", "Easy Chicken Adobo Recipe", 'easy chicken adobo recipe', "1"
+    answer = gets.strip.downcase
+  
+     case 
+     
+    when answer.include?("adobo") || answer.include?("1")
 
       puts "Here are the directions for cooking Adobo: "
       puts PinoyDishes::Meals.scrape_adobo.instructions
-=begin  @meals_adobo.each do |meals|
-       puts "#{meals.instructions}"
-      end
-      puts "Here is the recipe for Adobo: https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/"
-=end     
-    when "Sinigang", 'sinigang', "2"
+ 
+    when answer.include?("sinigang") || answer.include?("2")
  
        puts "Here are the directions for cooking Sinigang: "
        puts PinoyDishes::Meals.scrape_sinigang.instructions
-=begin      @meals.each do |meals|
-        puts "#{meals.instructions}"
-      end
-=end      # puts "Here is the recipe for Sinigang: https://panlasangpinoy.com/pork-sinigang-na-baboy-recipe/"
+
     
-    when "Nilaga", "nilaga", "Nilagang Litid ng Baka", "nilagang litid ng baka", "3"
+    when answer.include?("nilaga") || answer.include?("3")
      
        puts "Here are the directions for cooking Niglaga: "
        puts PinoyDishes::Meals.scrape_nilaga.instructions
-=begin      @meals.each do |meals|
-        puts "#{meals.instructions}"
-      end
-=end      # puts "Here is the recipe for Nilaga: https://panlasangpinoy.com/nilagang-litid-ng-baka/"
-    
-    when "Bistek", "bistek", "Bistek Tagalog Recipe - Pinoy Beefsteak", "bistek tagalog recipe - pinoy beefsteak", "4"
+
+    when answer.include?("bistek") || answer.include?("4")
      
        puts "Here are the directions for cooking Bistek: "
        puts PinoyDishes::Meals.scrape_bistek.instructions
-=begin      @meals.each do |meals|
-        puts "#{meals.instructions}"
-      end
-      
-      # puts "Here is the recipe for Bistek: https://panlasangpinoy.com/bistek-tagalog-beefsteak-recipe/"
-=end    
-    when "Kare-Kare", "kare-kare", "Oxtail Kare-Kare Recipe", "oxtail kare-kare recipe", "5"
+ 
+    when answer.include?("kare-kare") || answer.include?("5")
        
        puts "Here are the directions for cooking Kare-Kare: "
        puts PinoyDishes::Meals.scrape_kare_kare.instructions
-=begin      @meals.each do |meals|
-        puts "#{meals.instructions}"
-      end
-=end      # puts "Here is the recipe for Kare-Kare: https://panlasangpinoy.com/oxtail-kare-kare-recipe-peanut-stew/"
-    
-    when "Pinakbet", "pinakbet", "Pinakbet Tagalog", "pinakbet tagalog", "6"
+
+    when answer.include?("pinakbet") || answer.include?("6")
        
        puts "Here are the directions for cooking Pinakbet: "
        puts PinoyDishes::Meals.scrape_pinakbet.instructions
-=begin      @meals.each do |meals|
-        puts "#{meals.instructions}"
-      end
-=end      # puts "Here is the recipe for Pinakbet: https://panlasangpinoy.com/pinakbet-tagalog-recipe-knr-sc/"
-    
-    when "Diniguan", "diniguan", "Dinuguan Recipe", "diniguan recipe", "7"
+
+    when answer.include?("diniguan") || answer.include?("7")
 
        puts "Here are the directions for cooking Dinuguan: "
        puts PinoyDishes::Meals.scrape_diniguan.instructions
-=begin      @meals.each do |meals|
-        puts "#{meals.instructions}"
-      end
-=end      # puts "Here is the recipe for Diniguan: https://panlasangpinoy.com/dinuguan-blood-stew/"
-    
-    when "Bicol Express", "bicol express", "Pork Bicol Express Recipe", "pork bicol express recipe", "8"
+
+    when answer.include?("bicol express") || answer.include?("8")
    
        puts "Here are the directions for cooking Bicol Express: "
        puts PinoyDishes::Meals.scrape_bicol_express.instructions
-=begin      @meals.each do |meals|
-        puts "#{meals.instructions}"
-      end
-=end      # puts "Here is the recipe for Bicol Express: https://panlasangpinoy.com/pork-bicol-express-recipe/"
-    
-    when "Lumpia", "lumpia", "Chicken Lumpia", "chicken lumpia", "9"
+
+    when answer.include?("lumpia") || answer.include?("9")
      
        puts "Here are the directions for cooking Lumpia: "
        puts PinoyDishes::Meals.scrape_lumpia.instructions
-=begin      @meals.each do |meals|
-        puts "#{meals.instructions}"
-      end
-=end      # puts "Here is the recipe for Lumpia: https://panlasangpinoy.com/chicken-lumpia/"
-    
-    when "Tapsilog", "tapsilog", "Tapsilog Recipe", "tapsilog recipe", "10"
+
+    when answer.include?("tapsilog") || answer.include?("10")
      
        puts "Here are the directions for cooking Tapsilog: "
        puts PinoyDishes::Meals.scrape_tapsilog.instructions
-=begin      @meals.each do |meals|
-        puts "#{meals.instructions}"
-      end
-=end      # puts "Here is the recipe for -silog: https://panlasangpinoy.comhcipe/"
-    when "exit", "Exit", "EXIT"
+
+
+    when answer.include?("exit")
         paalam
         exit
     else
       puts "Sorry, I didn't get that. Which food would you like to try to make?"
       pano_gawin
   end
+
 
   def iba 
     puts "Would you like to learn more? Type 'Return' to return to the menu. If not, type 'Salamat'."
